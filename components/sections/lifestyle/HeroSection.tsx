@@ -1,0 +1,46 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+interface HeroSectionProps {
+  title: string;
+  subtitle: string;
+  description: string;
+  image: string;
+}
+
+export default function HeroSection({ title, subtitle, description, image }: HeroSectionProps) {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0">
+        <Image
+          src={image}
+          alt="VRA Land Lifestyle"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+            {title}
+          </h1>
+          <p className="text-2xl md:text-3xl text-primary-100 mb-8 font-light">
+            {subtitle}
+          </p>
+          <p className="text-xl text-primary-100 max-w-4xl mx-auto leading-relaxed">
+            {description}
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
