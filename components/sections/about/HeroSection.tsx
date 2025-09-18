@@ -1,34 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  BuildingOffice2Icon,
-  UsersIcon,
-  TrophyIcon,
-} from "@heroicons/react/24/outline";
 
 interface HeroSectionProps {
   yearsOfExperience: number;
 }
 
 export default function HeroSection({ yearsOfExperience }: HeroSectionProps) {
-  const stats = [
-    {
-      icon: BuildingOffice2Icon,
-      value: "25+",
-      label: "Projects Completed",
-    },
-    {
-      icon: UsersIcon,
-      value: "500+",
-      label: "Families Served",
-    },
-    {
-      icon: TrophyIcon,
-      value: `${yearsOfExperience}+`,
-      label: "Years of Excellence",
-    },
-  ];
 
   return (
     <section className="relative bg-primary-900 overflow-hidden pt-24 min-h-[60vh] flex items-center">

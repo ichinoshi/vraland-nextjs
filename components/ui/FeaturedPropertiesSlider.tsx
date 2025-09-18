@@ -5,8 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence, PanInfo } from "framer-motion";
 import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
   MapPinIcon,
   ArrowRightIcon,
   BuildingOfficeIcon,

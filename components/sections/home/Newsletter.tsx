@@ -86,7 +86,7 @@ export default function Newsletter() {
                   Thank You!
                 </h3>
                 <p className="text-text-secondary">
-                  You've successfully subscribed to our newsletter. We'll keep you updated with the latest news and opportunities.
+                  You&apos;ve successfully subscribed to our newsletter. We&apos;ll keep you updated with the latest news and opportunities.
                 </p>
               </motion.div>
             )}

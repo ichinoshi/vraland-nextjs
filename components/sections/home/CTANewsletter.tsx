@@ -66,7 +66,7 @@ export default function CTANewsletter() {
             </h2>
 
             <p className="text-xl text-text-secondary leading-relaxed mb-8">
-              Get in touch with our expert team today. We're here to help you
+              Get in touch with our expert team today. We&apos;re here to help you
               discover the perfect property that matches your lifestyle and
               investment goals.
             </p>
@@ -158,7 +158,7 @@ export default function CTANewsletter() {
                   Thank You!
                 </h4>
                 <p className="text-text-secondary">
-                  You've successfully subscribed to our newsletter. We'll keep
+                  You&apos;ve successfully subscribed to our newsletter. We&apos;ll keep
                   you updated with the latest news and opportunities.
                 </p>
               </motion.div>

@@ -18,7 +18,7 @@ export default function ContactSupportSection() {
             Still Have Questions?
           </h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Can't find the answer you're looking for? Our friendly team is
+            Can&apos;t find the answer you&apos;re looking for? Our friendly team is
             here to help you with any questions about VRA Land developments.
           </p>
 

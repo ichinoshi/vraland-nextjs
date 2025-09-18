@@ -48,7 +48,7 @@ export default function AboutCompany() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
-              Transforming Oriental Mindoro's
+              Transforming Oriental Mindoro&apos;s
               <span className="block text-accent-600">
                 Real Estate Landscape
               </span>

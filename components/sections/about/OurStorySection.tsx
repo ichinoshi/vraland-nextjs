@@ -26,80 +26,10 @@ const ClientOnlyContent = ({ children }: { children: React.ReactNode }) => {
   }
 
   return <>{children}</>;
-};
-
-// Timeline data
-const timelineEvents = [
-  {
-    year: "2008",
-    title: "Lorem Ipsum Dolor",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    icon: SparklesIcon,
-    highlight: "Ut enim ad minim veniam",
-  },
-  {
-    year: "2010",
-    title: "Quis Nostrud Exercitation",
-    description:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    icon: BuildingOfficeIcon,
-    highlight: "Duis aute irure dolor",
-  },
-  {
-    year: "2015",
-    title: "Excepteur Sint Occaecat",
-    description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    icon: UserGroupIcon,
-    highlight: "Sed do eiusmod tempor",
-  },
-  {
-    year: "2020",
-    title: "Consectetur Adipiscing",
-    description:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    icon: RocketLaunchIcon,
-    highlight: "Ullamco laboris nisi",
-  },
-  {
-    year: "2025",
-    title: "Magna Aliqua Enim",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-    icon: TrophyIcon,
-    highlight: "Totam rem aperiam eaque",
-  },
-];
-
-// Key achievements data
-const achievements = [
-  {
-    icon: HeartIcon,
-    title: "Lorem Ipsum Dolor",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-    stats: "500+ Lorem",
-  },
-  {
-    icon: MapPinIcon,
-    title: "Consectetur Adipiscing",
-    description:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-    stats: "5+ Ipsum",
-  },
-  {
-    icon: TrophyIcon,
-    title: "Excepteur Sint",
-    description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    stats: "Dolor Sit",
-  },
-];
+}
 
 export default function OurStorySection() {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [activeTimeline, setActiveTimeline] = useState(0);
 
   return (
     <section className="section-padding bg-primary-900 text-white">

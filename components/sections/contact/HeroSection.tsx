@@ -15,7 +15,7 @@ export default function HeroSection() {
             Contact Us
           </h1>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-            We'd love to hear from you. Reach out to us with any questions or
+            We&apos;d love to hear from you. Reach out to us with any questions or
             inquiries.
           </p>
         </motion.div>

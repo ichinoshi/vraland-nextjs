@@ -10,8 +10,6 @@ import {
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
-  PlayIcon,
-  PauseIcon,
   ArrowDownIcon,
 } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
@@ -78,9 +76,6 @@ export default function HeroSlider() {
     setCurrentSlide(index);
   };
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
 
   const scrollToNext = () => {
     const nextSection = document.querySelector("#about-company");

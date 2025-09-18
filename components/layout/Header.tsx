@@ -56,7 +56,7 @@ export default function Header() {
       if (ticking) clearTimeout(ticking);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, controlHeader]);
 
   return (
     <>

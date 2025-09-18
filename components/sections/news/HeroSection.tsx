@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { NewspaperIcon } from "@heroicons/react/24/outline";
 
 interface HeroSectionProps {
   title: string;

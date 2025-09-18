@@ -78,7 +78,7 @@ export default function Testimonials() {
             <span className="block text-primary-600">Say About Us</span>
           </h2>
           <p className="text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied clients
+            Don&apos;t just take our word for it. Here&apos;s what our satisfied clients
             have to say about their VRA Land experience.
           </p>
         </motion.div>
@@ -100,7 +100,7 @@ export default function Testimonials() {
             </div>
 
             <blockquote className="text-xl md:text-2xl text-text-primary leading-relaxed text-center mb-8 italic">
-              "{testimonials[currentIndex].content}"
+              &ldquo;{testimonials[currentIndex].content}&rdquo;
             </blockquote>
 
             <div className="text-center">
@@ -167,7 +167,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-3">
-                "{testimonial.content}"
+                &ldquo;{testimonial.content}&rdquo;
               </p>
               <div>
                 <h5 className="font-semibold text-text-primary text-sm">

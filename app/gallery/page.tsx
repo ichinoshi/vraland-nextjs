@@ -27,7 +27,7 @@ export default function GalleryPage() {
               Gallery Page Coming Soon
             </p>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto leading-relaxed mb-12">
-              We're curating an amazing visual gallery showcasing the beauty and
+              We&apos;re curating an amazing visual gallery showcasing the beauty and
               craftsmanship of VRA Land developments. Check back soon to explore
               stunning imagery of our projects.
             </p>

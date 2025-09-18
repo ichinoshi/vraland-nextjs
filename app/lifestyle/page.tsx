@@ -27,7 +27,7 @@ export default function LifestylePage() {
               Lifestyle Page Coming Soon
             </p>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto leading-relaxed mb-12">
-              We're working hard to bring you an amazing lifestyle experience
+              We&apos;re working hard to bring you an amazing lifestyle experience
               page. Check back soon to discover the exceptional amenities and
               lifestyle offerings at VRA Land developments.
             </p>

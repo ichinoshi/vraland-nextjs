@@ -1,14 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import {
-  ArrowRightIcon,
-  MapPinIcon,
-  HomeIcon,
-  BuildingOfficeIcon,
-  SunIcon,
-} from "@heroicons/react/24/outline";
-import { motion } from "framer-motion";
 import HeroSection from "@/components/sections/home/HeroSection";
 import ProjectFeatures from "@/components/sections/home/ProjectFeatures";
 import AboutCompany from "@/components/sections/home/AboutCompany";

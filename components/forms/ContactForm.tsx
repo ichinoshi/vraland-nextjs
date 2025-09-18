@@ -4,19 +4,15 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
-  Loader2,
-  Send,
   CheckCircle,
   AlertCircle,
   X,
-  MapPin,
+  Clock,
   Phone,
   Mail,
-  Clock,
 } from "lucide-react";
-import { CheckCircleIcon } from "@heroicons/react/24/outline";
 
 // Define form schema using zod - matching the page validation and fields
 const contactFormSchema = z.object({
@@ -37,6 +33,20 @@ interface ContactFormProps {
   onClose?: () => void;
 }
 
+interface ContactInfo {
+  name: string;
+  email: string;
+  subject: string;
+}
+
+interface ConfirmationInfo {
+  title: string;
+  description: string;
+  estimatedResponse: string;
+  referenceId: string;
+  nextSteps: string[];
+}
+
 const inputBaseStyles =
   "w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-colors text-gray-900";
 const errorStyles = "border-red-500";
@@ -47,9 +57,9 @@ export function ContactForm({ onSuccess, onClose }: ContactFormProps) {
   const [submitStatus, setSubmitStatus] = useState<{
     success: boolean;
     message: string;
-    details?: any;
-    contact?: any;
-    confirmation?: any;
+    details?: unknown;
+    contact?: ContactInfo;
+    confirmation?: ConfirmationInfo;
   } | null>(null);
   const [isMounted, setIsMounted] = useState(false);
 
@@ -105,7 +115,7 @@ export function ContactForm({ onSuccess, onClose }: ContactFormProps) {
           success: true,
           message:
             result.message ||
-            "Thank you for your message! We'll get back to you soon.",
+            "Thank you for your message! We&apos;ll get back to you soon.",
           details: result.details,
           contact: result.contact,
           confirmation: result.confirmation,
@@ -164,7 +174,7 @@ export function ContactForm({ onSuccess, onClose }: ContactFormProps) {
 
           {/* Description */}
           <p className="text-gray-600 mb-6 leading-relaxed">
-            {submitStatus.confirmation?.description || submitStatus.message}
+            {submitStatus.confirmation?.description || String(submitStatus.message) || "Thank you for your message!"}
           </p>
 
           {/* Contact Summary */}
@@ -177,19 +187,19 @@ export function ContactForm({ onSuccess, onClose }: ContactFormProps) {
                 <div className="flex justify-between">
                   <span className="text-gray-600">Name:</span>
                   <span className="font-medium text-gray-900">
-                    {submitStatus.contact.name}
+                    {submitStatus.contact?.name || "N/A"}
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Email:</span>
                   <span className="font-medium text-gray-900">
-                    {submitStatus.contact.email}
+                    {submitStatus.contact?.email || "N/A"}
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Subject:</span>
                   <span className="font-medium text-gray-900">
-                    {submitStatus.contact.subject}
+                    {submitStatus.contact?.subject || "N/A"}
                   </span>
                 </div>
               </div>
@@ -222,17 +232,19 @@ export function ContactForm({ onSuccess, onClose }: ContactFormProps) {
           )}
 
           {/* Next Steps */}
-          {submitStatus.details?.nextSteps && (
+          {submitStatus.confirmation?.nextSteps && (
             <div className="bg-yellow-50 rounded-lg p-4 mb-6">
               <div className="flex items-start">
                 <Clock className="w-5 h-5 text-yellow-600 mr-2 mt-0.5 flex-shrink-0" />
                 <div className="text-left">
                   <h4 className="font-semibold text-yellow-900 mb-1">
-                    What's Next?
+                    What&apos;s Next?
                   </h4>
-                  <p className="text-yellow-800 text-sm">
-                    {submitStatus.details.nextSteps}
-                  </p>
+                  <ul className="text-yellow-800 text-sm space-y-1">
+                    {submitStatus.confirmation.nextSteps.map((step, index) => (
+                      <li key={index}>• {step}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
