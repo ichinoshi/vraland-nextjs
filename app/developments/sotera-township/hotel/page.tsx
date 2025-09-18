@@ -1,9 +1,9 @@
 "use client";
 
-import HeroSection from "@/components/sections/developments/sotera-township/properties/sotera-hotel/HeroSection";
-import KeyFeaturesSection from "@/components/sections/developments/sotera-township/properties/sotera-hotel/KeyFeaturesSection";
-import OverviewSection from "@/components/sections/developments/sotera-township/properties/sotera-hotel/OverviewSection";
-import GallerySection from "@/components/sections/developments/sotera-township/properties/sotera-hotel/GallerySection";
+import HeroSection from "@/components/sections/developments/sotera-hotel/HeroSection";
+import KeyFeaturesSection from "@/components/sections/developments/sotera-hotel/KeyFeaturesSection";
+import OverviewSection from "@/components/sections/developments/sotera-hotel/OverviewSection";
+import GallerySection from "@/components/sections/developments/sotera-hotel/GallerySection";
 
 const soteraHotelData = {
   name: "Sotera Hotel",

@@ -16,7 +16,12 @@ export default function NewsletterSection() {
     setError("");
 
     try {
-      const response = await fetch("/api/newsletter", {
+      // API Endpoint Configuration:
+      // Development (Node.js): Use "/api/newsletter" 
+      // Production/cPanel (PHP): Use "/php/newsletter.php"
+      const apiEndpoint = process.env.NODE_ENV === 'production' ? "/php/newsletter.php" : "/api/newsletter";
+      
+      const response = await fetch(apiEndpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

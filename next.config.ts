@@ -1,16 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Enable static export for cPanel deployment
-  // Comment out the next line if deploying to Node.js hosting
-  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
+  // Static export for cPanel deployment (comment out for development)
+  // Uncomment the line below when building for cPanel deployment
+  output: process.env.DEPLOY_TARGET === 'cpanel' ? 'export' : undefined,
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  
-  // Image optimization settings
-  images: process.env.NODE_ENV === 'production' ? {
-    unoptimized: true
-  } : {
+  images: {
+    unoptimized: true,
     formats: ["image/webp", "image/avif"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -44,7 +41,7 @@ const nextConfig: NextConfig = {
   },
 
   // Webpack configuration for better performance (only when not using Turbopack)
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+  webpack: (config: any, { buildId, dev, isServer, defaultLoaders, webpack }: any) => {
     // Skip webpack configuration if using Turbopack
     if (process.env.TURBOPACK) {
       return config;

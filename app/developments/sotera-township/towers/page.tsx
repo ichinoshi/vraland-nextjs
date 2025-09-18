@@ -1,9 +1,9 @@
 "use client";
 
-import HeroSection from "@/components/sections/developments/sotera-township/properties/sotera-towers/HeroSection";
-import KeyFeaturesSection from "@/components/sections/developments/sotera-township/properties/sotera-towers/KeyFeaturesSection";
-import OverviewSection from "@/components/sections/developments/sotera-township/properties/sotera-towers/OverviewSection";
-import GallerySection from "@/components/sections/developments/sotera-township/properties/sotera-towers/GallerySection";
+import HeroSection from "@/components/sections/developments/sotera-towers/HeroSection";
+import KeyFeaturesSection from "@/components/sections/developments/sotera-towers/KeyFeaturesSection";
+import OverviewSection from "@/components/sections/developments/sotera-towers/OverviewSection";
+import GallerySection from "@/components/sections/developments/sotera-towers/GallerySection";
 
 const soteraTowersData = {
   name: "Sotera Towers",

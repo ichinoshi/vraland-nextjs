@@ -1,9 +1,9 @@
 "use client";
 
-import HeroSection from "@/components/sections/developments/sotera-township/properties/sotera-mall/HeroSection";
-import KeyFeaturesSection from "@/components/sections/developments/sotera-township/properties/sotera-mall/KeyFeaturesSection";
-import OverviewSection from "@/components/sections/developments/sotera-township/properties/sotera-mall/OverviewSection";
-import GallerySection from "@/components/sections/developments/sotera-township/properties/sotera-mall/GallerySection";
+import HeroSection from "@/components/sections/developments/sotera-mall/HeroSection";
+import KeyFeaturesSection from "@/components/sections/developments/sotera-mall/KeyFeaturesSection";
+import OverviewSection from "@/components/sections/developments/sotera-mall/OverviewSection";
+import GallerySection from "@/components/sections/developments/sotera-mall/GallerySection";
 
 const soteraMallData = {
   name: "Sotera Mall",

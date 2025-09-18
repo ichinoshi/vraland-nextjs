@@ -5,14 +5,7 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  CheckCircle,
-  AlertCircle,
-  X,
-  Clock,
-  Phone,
-  Mail,
-} from "lucide-react";
+import { CheckCircle, AlertCircle, X, Clock, Phone, Mail } from "lucide-react";
 
 // Define form schema using zod - matching the page validation and fields
 const contactFormSchema = z.object({
@@ -97,10 +90,17 @@ export function ContactForm({ onSuccess, onClose }: ContactFormProps) {
     setSubmitStatus(null);
 
     try {
-      // Use Next.js API route
+      // API Endpoint Configuration:
+      // Development (Node.js): Use "/api/contact"
+      // Production/cPanel (PHP): Use "/contact.php"
+      const apiEndpoint =
+        process.env.NODE_ENV === "production"
+          ? "/php/contact.php"
+          : "/api/contact";
       console.log("Form data:", data);
+      console.log("Using endpoint:", apiEndpoint);
 
-      const response = await fetch("/api/contact", {
+      const response = await fetch(apiEndpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -177,7 +177,9 @@ export function ContactForm({ onSuccess, onClose }: ContactFormProps) {
 
           {/* Description */}
           <p className="text-gray-600 mb-6 leading-relaxed">
-            {submitStatus.confirmation?.description || submitStatus.message || "Thank you for your message!"}
+            {submitStatus.confirmation?.description ||
+              submitStatus.message ||
+              "Thank you for your message!"}
           </p>
 
           {/* Contact Summary */}
