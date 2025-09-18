@@ -57,7 +57,10 @@ export function ContactForm({ onSuccess, onClose }: ContactFormProps) {
   const [submitStatus, setSubmitStatus] = useState<{
     success: boolean;
     message: string;
-    details?: unknown;
+    details?: {
+      nextSteps?: string[];
+      [key: string]: unknown;
+    };
     contact?: ContactInfo;
     confirmation?: ConfirmationInfo;
   } | null>(null);
@@ -174,7 +177,7 @@ export function ContactForm({ onSuccess, onClose }: ContactFormProps) {
 
           {/* Description */}
           <p className="text-gray-600 mb-6 leading-relaxed">
-            {submitStatus.confirmation?.description || String(submitStatus.message) || "Thank you for your message!"}
+            {submitStatus.confirmation?.description || submitStatus.message || "Thank you for your message!"}
           </p>
 
           {/* Contact Summary */}
