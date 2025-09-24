@@ -138,6 +138,7 @@ export default function LazuleSection({ className = "" }: LazuleSectionProps) {
                   Discover Lazule Resort
                 </motion.button>
               </Link>
+              {/* 
               <Link href="/contact">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -148,6 +149,7 @@ export default function LazuleSection({ className = "" }: LazuleSectionProps) {
                 </motion.button>
               </Link>
             </div>
+            */}
           </motion.div>
 
           {/* Image */}
