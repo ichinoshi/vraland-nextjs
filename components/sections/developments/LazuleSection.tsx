@@ -148,8 +148,8 @@ export default function LazuleSection({ className = "" }: LazuleSectionProps) {
                   Book a Tour
                 </motion.button>
               </Link>
+              */}
             </div>
-            */}
           </motion.div>
 
           {/* Image */}
