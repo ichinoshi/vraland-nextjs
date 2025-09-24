@@ -11,9 +11,9 @@ const lazuleData = {
   name: "Lazule Resort",
   location: "Puerto Galera",
   description:
-    "Escape to paradise at our exclusive resort development offering world-class amenities, private beach access, premier tennis and sports complex, and breathtaking natural beauty.",
+    "Escape to paradise at our exclusive resort development offering world-class amenities, private beach access, luxury infinity pool complex, and breathtaking natural beauty.",
   longDescription:
-    "Lazule Resort represents the ultimate in tropical luxury living, where pristine natural beauty meets world-class hospitality. This exclusive resort development offers an unparalleled escape from the ordinary, featuring private beach access, premier tennis and sports facilities, and premium accommodations set within a breathtaking tropical paradise. Every element is designed to provide guests and residents with an extraordinary experience that celebrates the natural splendor of Puerto Galera while delivering the highest standards of luxury and service.",
+    "Lazule Resort represents the ultimate in tropical luxury living, where pristine natural beauty meets world-class hospitality. This exclusive resort development offers an unparalleled escape from the ordinary, featuring private beach access, spectacular infinity pool complex, and premium accommodations set within a breathtaking tropical paradise. Every element is designed to provide guests and residents with an extraordinary experience that celebrates the natural splendor of Puerto Galera while delivering the highest standards of luxury and service.",
   heroImage: "/images/developments/lazule/hero.jpg",
   images: [
     {
@@ -31,7 +31,7 @@ const lazuleData = {
     {
       id: "lazule-3",
       src: "/images/placeholder/placeholder.jpg",
-      alt: "Tennis and Sports Complex",
+      alt: "Infinity Pool Complex",
       category: "amenities",
     },
     {
@@ -86,9 +86,9 @@ const lazuleData = {
     },
     {
       icon: "BuildingOfficeIcon",
-      title: "Tennis & Sports Complex",
+      title: "Infinity Pool Complex",
       description:
-        "World-class tennis courts and multi-sport facilities designed for championship-level play",
+        "Spectacular multi-level infinity pools with ocean views and luxurious poolside amenities",
     },
     {
       icon: "MapPinIcon",
@@ -109,13 +109,13 @@ const lazuleData = {
       ],
     },
     {
-      category: "Tennis & Sports Recreation",
+      category: "Pool & Aquatic Recreation",
       items: [
-        "Championship Tennis Courts",
-        "Tennis Academy & Pro Shop",
-        "Multi-Sport Courts (Basketball, Volleyball)",
-        "Fitness Center & Gym",
-        "Hiking & Jogging Trails",
+        "Multi-Level Infinity Pools",
+        "Adults-Only Pool Sanctuary",
+        "Children's Water Play Area",
+        "Poolside Cabanas & Daybeds",
+        "Swim-Up Pool Bar",
       ],
     },
     {
@@ -154,7 +154,7 @@ const lazuleData = {
     highlights: [
       "Beachfront villa clusters with private access",
       "Central resort facilities and amenities",
-      "Tennis and sports complex with ocean views",
+      "Infinity pool complex with ocean views",
       "Conservation areas for environmental protection",
       "Sustainable infrastructure and utilities",
     ],
@@ -183,15 +183,15 @@ const lazuleData = {
       ],
     },
     {
-      name: "Tennis & Sports Complex",
+      name: "Infinity Pool Complex",
       description:
-        "Premier tennis and multi-sport facility designed to international tournament standards.",
+        "Breathtaking multi-level infinity pool complex designed to blend seamlessly with the ocean horizon.",
       details: [
-        "6 championship tennis courts (clay & hard court)",
-        "Multi-sport courts for basketball and volleyball",
-        "Tennis academy with professional coaching",
-        "Sports clubhouse with dining and pro shop",
-        "Ocean and mountain views from all courts",
+        "Three-tier infinity pools cascading toward the ocean",
+        "Adults-only infinity pool with swim-up bar",
+        "Family pool with children's water features",
+        "Private poolside cabanas and VIP lounging areas",
+        "Underwater sound system and ambient lighting",
       ],
     },
     {
